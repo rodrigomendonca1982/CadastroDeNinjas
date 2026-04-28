@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MissoesController {
 
     @GetMapping("/exibirmissoes")
-    public String ExibirMissao(){
+    public String ExibirMissoes(){
         return  "Missoes Ninja";
-
-
     }
 }

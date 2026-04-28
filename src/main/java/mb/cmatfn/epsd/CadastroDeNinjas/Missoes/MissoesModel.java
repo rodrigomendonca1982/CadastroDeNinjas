@@ -15,6 +15,8 @@ public class MissoesModel {
 
     private String dificuldade;
 
+    // @OneToMany : Recupera uma lista de Ninjas: Uma missao pode ter varios ninjas
+    @OneToMany(mappedBy = "missoes")
     private NinjaModel ninja;
 
     public MissoesModel() {
