@@ -1,4 +1,4 @@
-package mb.cmatfn.epsd.CadastroDeNinjas;
+package mb.cmatfn.epsd.CadastroDeNinjas.Ninjas;
 
 import jakarta.persistence.*;
 
@@ -15,7 +15,9 @@ public class NinjaModel {
     private Long id;
     private String nome;
     private String email;
-    private :wqint idade;
+    private int idade;
+    private List<MissoesModel> missoes;
+
 
     public NinjaModel(){
 

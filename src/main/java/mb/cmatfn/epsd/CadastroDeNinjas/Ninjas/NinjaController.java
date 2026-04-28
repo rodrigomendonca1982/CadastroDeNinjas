@@ -1,4 +1,4 @@
-package mb.cmatfn.epsd.CadastroDeNinjas;
+package mb.cmatfn.epsd.CadastroDeNinjas.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
