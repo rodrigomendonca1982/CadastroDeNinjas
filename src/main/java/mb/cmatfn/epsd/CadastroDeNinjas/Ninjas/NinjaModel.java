@@ -35,7 +35,7 @@ public class NinjaModel {
     private int idade;
 
     //@ManyToOne: Recupera as Missoes: Muitas missoes para um Ninja
-git    @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "missoes_id") // Foreing Key ou chave estrangeira
     private MissoesModel missoes;
 

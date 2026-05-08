@@ -1,5 +1,5 @@
 package mb.cmatfn.epsd.CadastroDeNinjas.Missoes;
-
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +26,6 @@ public class MissoesModel {
 
     // @OneToMany : Recupera uma lista de Ninjas: Uma missao pode ter varios ninjas
     @OneToMany(mappedBy = "missoes")
-    private NinjaModel ninja;
+    private List<NinjaModel> ninjas;
 
 }
