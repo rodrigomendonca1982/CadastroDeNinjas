@@ -2,10 +2,20 @@ package mb.cmatfn.epsd.CadastroDeNinjas.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/ninjas")
 public class NinjaController {
+
+    private NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
+
+
 
     @GetMapping("/boasvindas")
     public String boasVindas() {
@@ -20,9 +30,9 @@ public class NinjaController {
     }
 
     // Mostrar todos os Ninja
-    @PostMapping("/listar")
-    public String mostrarTodosOsNinjas() {
-        return "Mostrar Ninja";
+    @GetMapping("/listar")
+    public List<NinjaModel> listarNinjas() {
+        return ninjaService.listarNinjas();
     }
 
     // Ninja por ID
@@ -39,7 +49,7 @@ public class NinjaController {
     }
 
     // Deletar Ninja
-    @DeleteMapping Mapping("/deletarId")
+    @DeleteMapping("/deletarId")
     public String deletarNinjaPorId(){
         return "Ninja Deletado por ID";
     }
