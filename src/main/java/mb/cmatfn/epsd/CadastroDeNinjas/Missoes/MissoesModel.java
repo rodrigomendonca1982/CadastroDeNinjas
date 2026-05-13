@@ -1,5 +1,7 @@
 package mb.cmatfn.epsd.CadastroDeNinjas.Missoes;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +28,7 @@ public class MissoesModel {
 
     // @OneToMany : Recupera uma lista de Ninjas: Uma missao pode ter varios ninjas
     @OneToMany(mappedBy = "missoes")
+    @JsonIgnore //Loop de Serializacao: ignorar a serializacao do loop infinto
     private List<NinjaModel> ninjas;
 
 }
