@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninjas")
 public class NinjaController {
 
     @GetMapping("/boasvindas")
@@ -19,14 +19,14 @@ public class NinjaController {
         return "Ninja Criada com sucesso";
     }
 
-    // Mostrar Ninja por ID
-    @PostMapping("/todos")
+    // Mostrar todos os Ninja
+    @PostMapping("/listar")
     public String mostrarTodosOsNinjas() {
         return "Mostrar Ninja";
     }
 
-    // Mostrar todos os Ninja
-    @PostMapping("/todosID")
+    // Ninja por ID
+    @PostMapping("/listarID")
     public String mostrarTodosOsNinjasPorID() {
         return "Mostrar Ninjas por ID";
     }
